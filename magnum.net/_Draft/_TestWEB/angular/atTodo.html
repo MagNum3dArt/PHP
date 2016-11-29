@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+    <script src="./js/todo.js"></script>
+    <link rel="stylesheet" href="./css/todo.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha384-zF4BRsG/fLiTGfR9QL82DrilZxrwgY/+du4p/c7J72zZj+FLYq4zY00RylP9ZjiT" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-default">
+
+</nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h2>Список дел</h2>
+            <div ng-controller="TodoCtrl">
+                <span>Осталось {{remaining()}} из {{todos.length}}</span>    [ <a href="" ng-click="archive()">архив</a> ]
+                <div  class="has-success" ng-repeat="todo in todos">
+                    <div class="checkbox">
+                        <label>
+                            <input  class="btn btn-primary"type="checkbox" ng-model="todo.done">
+                            <span class="done-{{todo.done}}">{{todo.text}}</span>
+                        </label>
+                    </div>
+                </div>
+
+
+
+                <form ng-submit="addTodo()" class="navbar-form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="todoText"  placeholder="впишите новое дело">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Добавить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
