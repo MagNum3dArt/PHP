@@ -8,6 +8,12 @@ include "__var.php";
 	<meta http-equiv="Content-Language" content="en-us">
 	<meta http-equiv="KEYWORDS" content="MagNum 3D Animator Artist MagNum3D">
 	<meta http-equiv="DESCRIPTION" content="MagNum 3D Animator Artist MagNum3D">
+	<link href="../css/cyborg.bootstrap.min.css" rel="stylesheet">
+	<script
+		src="https://code.jquery.com/jquery-3.1.1.min.js"
+		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<title>MagNum 3D - <?=$titles[$tmp]?><?if($s){?>: <?=$subTitle[$tmp][$s_tmp]?><?}?></title>
 </head>
 <!--  -->
@@ -26,7 +32,7 @@ include "__var.php";
 	COLOR: <?=$text?>
 }
 .h1 {
-	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: <?=$text?>; 
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: <?=$text?>;
 	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
 }
@@ -39,14 +45,17 @@ include "__var.php";
 A {
 	color : <?=$text?>;
 	font-weight : bold;
-	
+	text-decoration : none;
+
 }
 A:ACTIVE {
 	color : <?=$text?>;
+	text-decoration : none;
 }
 
 A:VISITED {
 	color : <?=$text1?>;
+	text-decoration : none;
 }
 
 A:HOVER {

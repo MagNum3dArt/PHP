@@ -8,9 +8,9 @@
 class Controller_Angular extends Controller
 {
     function action_aTodo(){
-        $this->view->generate('aTodo', 'template');
+        $this->view->generate('angular/aTodo', 'template');
     }
     function action_aBasic(){
-        $this->view->generate('aBasic', 'template');
+        $this->view->generate('angular/aBasic', 'template');
     }
 }
